@@ -32,4 +32,10 @@ public class PosMachine {
         return receipt;
     }
 
+    public String spliceItemDetails (String receipt)
+    {
+        String itemInfo = receipt;
+        return itemInfo;
+    }
+
 }
