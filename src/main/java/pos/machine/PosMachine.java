@@ -43,4 +43,8 @@ public class PosMachine {
         return receipt;
     }
 
+    public String renderReceipt (String receipt)
+    {
+        return receipt;
+    }
 }
