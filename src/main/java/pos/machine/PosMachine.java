@@ -26,5 +26,10 @@ public class PosMachine {
         return receipt;
     }
 
+    public String computeReceipt(List<ItemInfo> itemDetails)
+    {
+        String receipt = itemDetails.toString();
+        return receipt;
+    }
 
 }
