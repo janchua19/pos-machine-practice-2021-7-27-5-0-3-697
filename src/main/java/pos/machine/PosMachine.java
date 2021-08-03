@@ -38,4 +38,9 @@ public class PosMachine {
         return itemInfo;
     }
 
+    public String spliceReceipt (String receipt, double totalPrice)
+    {
+        return receipt;
+    }
+
 }
