@@ -14,6 +14,8 @@ public class ItemDataLoader {
         itemInfos.add(item2Info);
         itemInfos.add(item3Info);
 
+
+
         return itemInfos;
     }
 

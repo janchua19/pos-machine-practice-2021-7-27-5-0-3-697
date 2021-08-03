@@ -11,6 +11,7 @@ public class ItemInfo {
         this.price = price;
     }
 
+
     public String getBarcode() {
         return barcode;
     }

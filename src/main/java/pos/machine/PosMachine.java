@@ -8,10 +8,15 @@ public class PosMachine {
         return null;
     }
 
-    public static List<ItemInfo> getBarcodeDetails(List<String> barcodes){
+    public List<ItemInfo> getBarcodeDetails(List<String> barcodes){
         List<ItemInfo> itemDetails = new ArrayList<>();
         return itemDetails;
     }
 
-    public static List<S>
+
+    public List<ItemInfo> computeSubtotal(List<ItemInfo> itemDetails)
+    {
+        List<ItemInfo> itemsSubtotal = new ArrayList<>();
+        return itemsSubtotal;
+    }
 }

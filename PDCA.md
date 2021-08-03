@@ -6,9 +6,9 @@ A: Search for guides
 
 Function name: computeSubtotal
 P: 5 min(s) 0 sec(s)
-D: 0 min(s) 0 sec(s)
-C:
-A:
+D: 21 min(s) 0 sec(s)
+C: Difficulty on using <List>
+A: Search for guides
 
 Function name: computeTotalPrice
 P: 0 min(s) 0 sec(s)
