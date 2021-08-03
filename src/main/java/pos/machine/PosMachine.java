@@ -8,8 +8,10 @@ public class PosMachine {
         return null;
     }
 
-    public static List<String> getBarcodeDetails(List<String> barcodes){
-        List<String> itemDetails = new ArrayList<>();
+    public static List<ItemInfo> getBarcodeDetails(List<String> barcodes){
+        List<ItemInfo> itemDetails = new ArrayList<>();
         return itemDetails;
     }
+
+    public static List<S>
 }

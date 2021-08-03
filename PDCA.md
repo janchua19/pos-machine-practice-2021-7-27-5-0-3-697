@@ -5,7 +5,7 @@ C: Difficulty on using <List>
 A: Search for guides 
 
 Function name: computeSubtotal
-P: 0 min(s) 0 sec(s)
+P: 5 min(s) 0 sec(s)
 D: 0 min(s) 0 sec(s)
 C:
 A:
