@@ -3,7 +3,7 @@ package pos.machine;
 import java.util.ArrayList;
 import java.util.List;
 
-import static pos.machine.ItemDataLoader.retriveItemInfo;
+import static pos.machine.ItemDataLoader.retreiveItemInfos;
 
 public class PosMachine {
     int totalPrice;
@@ -38,7 +38,24 @@ public class PosMachine {
     private List<ItemDetails> getBarcodeDetails(List<String> loadBarcodes) {
         List<String> barcodeList = new ArrayList<>();
         List<ItemDetails> receipt = new ArrayList<>();
-        List<ItemInfo> itemInfos = retriveItemInfo();
+        List<ItemInfo> itemInfos = retreiveItemInfos();
+
+        for (String data : loadBarcodes) {
+            if(barcodeList.contains(data)){
+                //System.out.println(data);
+            }
+            else{
+                barcodeList.add(data);
+            }
+        }
+        for (String barcode : barcodeList) {
+            for (ItemInfo infos : itemInfos) {
+                if (infos.getBarcode().equals(barcode)) {
+                    ItemDetails items = new ItemDetails(infos.getBarcode(),infos.getName(),0,infos.getPrice(),0);
+                    receipt.add(items);
+                }
+            }
+        }
 
         return receipt;
     }
@@ -59,16 +76,16 @@ public class PosMachine {
 
     private void computeSubtotal(List<ItemDetails> itemList) {
         for (ItemDetails itemDetails : itemList)
-            itemDetails.setSubtotal(itemDetails.getSubtotal() * itemDetails.getUnitPrice());
+            itemDetails.setSubtotal(itemDetails.getQuantity() * itemDetails.getUnitPrice());
     }
 
     private void getItemQuantity(List<String> loadBarcodes, List<ItemDetails> itemList) {
-        int quantity;
+        int quantity = 0;
         for(ItemDetails itemDetails : itemList){
             quantity = 0;
             for (String barcode: loadBarcodes)
             {
-                quantity = itemDetails.getBarcode().equals(loadBarcodes) ? quantity + 1 : quantity;
+                quantity = itemDetails.getBarcode().equals(barcode) ? quantity+1 : quantity;
             }
             itemDetails.setQuantity(quantity);
         }
